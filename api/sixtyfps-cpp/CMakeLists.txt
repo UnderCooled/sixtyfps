@@ -212,10 +212,10 @@ if(SIXTYFPS_PACKAGE_BUNDLE_QT)
         find_package(Qt6 6.0 COMPONENTS Core Gui Widgets Svg)
         install(
             FILES
-                $<TARGET_FILE:Qt6::Core>
-                $<TARGET_FILE:Qt6::Gui>
-                $<TARGET_FILE:Qt6::Widgets>
-                $<TARGET_FILE:Qt6::Svg>
+                $<TARGET_PROPERTY:Qt6::Core,IMPORTED_LOCATION_RELEASE>
+                $<TARGET_PROPERTY:Qt6::Gui,IMPORTED_LOCATION_RELEASE>
+                $<TARGET_PROPERTY:Qt6::Widgets,IMPORTED_LOCATION_RELEASE>
+                $<TARGET_PROPERTY:Qt6::Svg,IMPORTED_LOCATION_RELEASE>
             TYPE LIB)
 
         install(
