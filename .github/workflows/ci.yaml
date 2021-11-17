@@ -203,7 +203,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/work/sixtyfps/Qt
-        key: ${{ runner.os }}-${{ github.job }}-cpp-Qt
+        key: ${{ runner.os }}-${{ github.job }}-cpp-qt
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       if: matrix.os == 'ubuntu-20.04'
@@ -216,6 +216,7 @@ jobs:
       with:
         version: 6.2.1
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
+        path: Qt
     - name: Cache cargo registry
       uses: actions/cache@v2
       with:
